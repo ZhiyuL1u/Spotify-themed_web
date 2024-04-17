@@ -7,6 +7,9 @@ A website where you can find Taylor's playlist
 3.MySQL
 4.react
 
+## preview
+www.Spotify-themed-web.zhiyuliu.com
+
 ## setup Version
 node >= 1.8
 

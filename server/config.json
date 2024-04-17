@@ -1,8 +1,8 @@
 {
-  "rds_host": "database-1.cpcg4s0w4ad9.us-east-2.rds.amazonaws.com",
-  "rds_port": "3306",
-  "rds_user": "MATCH_LIU",
-  "rds_password": "Liuzhiyu2001",
+  "rds_host": "xxx",
+  "rds_port": "xxx",
+  "rds_user": "xxx",
+  "rds_password": "xxx",
   "rds_db": "SWIFTIFY",
   "server_host": "0.0.0.0",
   "server_port": "8080"

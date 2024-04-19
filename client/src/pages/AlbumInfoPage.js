@@ -15,11 +15,11 @@ export default function AlbumInfoPage() {
   const [selectedSongId, setSelectedSongId] = useState(null);
 
   useEffect(() => {
-    fetch(`http://${config.server_host}:${config.server_port}/album/${album_id}`)
+    fetch(`https://${config.server_host}:${config.server_port}/album/${album_id}`)
       .then(res => res.json())
       .then(resJson => setAlbumData(resJson));
 
-    fetch(`http://${config.server_host}:${config.server_port}/album_songs/${album_id}`)
+    fetch(`https://${config.server_host}:${config.server_port}/album_songs/${album_id}`)
       .then(res => res.json())
       .then(resJson => setSongData(resJson));
   }, [album_id]);

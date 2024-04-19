@@ -23,11 +23,11 @@ export default function HomePage() {
     // Fetch request to get the song of the day. Fetch runs asynchronously.
     // The .then() method is called when the fetch request is complete
     // and proceeds to convert the result to a JSON which is finally placed in state.
-    fetch(`http://${config.server_host}:${config.server_port}/random`)
+    fetch(`https://${config.server_host}:${config.server_port}/random`)
       .then(res => res.json())
       .then(resJson => setSongOfTheDay(resJson));
 
-    fetch(`http://${config.server_host}:${config.server_port}/author/name`)
+    fetch(`https://${config.server_host}:${config.server_port}/author/name`)
         .then(res => res.json())
         .then(resJson => {
           console.log(resJson)
@@ -90,13 +90,13 @@ export default function HomePage() {
             </h2>
             <Divider/>
             <h2>Top Songs</h2>
-            <LazyTable route={`http://${config.server_host}:${config.server_port}/top_songs`} columns={songColumns}/>
+            <LazyTable route={`https://${config.server_host}:${config.server_port}/top_songs`} columns={songColumns}/>
             <Divider/>
             {/* TODO (TASK 16): add a h2 heading, LazyTable, and divider for top albums. Set the LazyTable's props for defaultPageSize to 5 and rowsPerPageOptions to [5, 10] */}
             {/* TODO (TASK 17): add a paragraph (<p></p>) that displays “Created by [name]” using the name state stored from TASK 13/TASK 14 */}
             <h2>Top Albums</h2>
             <LazyTable
-                route={`http://${config.server_host}:${config.server_port}/top_albums`}
+                route={`https://${config.server_host}:${config.server_port}/top_albums`}
                 columns={albumColumns}
                 defaultPageSize={5}
                 rowsPerPageOptions={[5, 10]}

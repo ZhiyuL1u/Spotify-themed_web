@@ -8,7 +8,7 @@ export default function AlbumsPage() {
   const [albums, setAlbums] = useState([]);
 
   useEffect(() => {
-    fetch(`http://${config.server_host}:${config.server_port}/albums`)
+    fetch(`https://${config.server_host}:${config.server_port}/albums`)
       .then(res => res.json())
       .then(resJson => setAlbums(resJson));
   }, []);

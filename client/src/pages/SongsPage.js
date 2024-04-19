@@ -20,7 +20,7 @@ export default function SongsPage() {
   const [explicit, setExplicit] = useState(false);
 
   useEffect(() => {
-    fetch(`http://${config.server_host}:${config.server_port}/search_songs`)
+    fetch(`https://${config.server_host}:${config.server_port}/search_songs`)
       .then(res => res.json())
       .then(resJson => {
         const songsWithId = resJson.map((song) => ({ id: song.song_id, ...song }));
@@ -29,7 +29,7 @@ export default function SongsPage() {
   }, []);
 
   const search = () => {
-    fetch(`http://${config.server_host}:${config.server_port}/search_songs?title=${title}` +
+    fetch(`https://${config.server_host}:${config.server_port}/search_songs?title=${title}` +
       `&duration_low=${duration[0]}&duration_high=${duration[1]}` +
       `&plays_low=${plays[0]}&plays_high=${plays[1]}` +
       `&danceability_low=${danceability[0]}&danceability_high=${danceability[1]}` +

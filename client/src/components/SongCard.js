@@ -31,11 +31,11 @@ export default function SongCard({ songId, handleClose }) {
     //       .then(res => res.json())
     //       .then(resJson => set state variable with album data)
     //     })
-    fetch(`http://${config.server_host}:${config.server_port}/song/${songId}`)
+    fetch(`https://${config.server_host}:${config.server_port}/song/${songId}`)
         .then(res => res.json())
         .then(songData => {
           setSongData(songData);
-          return fetch(`http://${config.server_host}:${config.server_port}/albums/${songData.album_id}`);
+          return fetch(`https://${config.server_host}:${config.server_port}/albums/${songData.album_id}`);
         })
         .then(res => res.json())
         .then(albumData => {

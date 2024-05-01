@@ -8,7 +8,7 @@ A website where you can find Taylor's playlist
 4.react
 
 ## preview
-www.Spotify-themed-web.zhiyuliu.com
+https://spotify-themed-web.zhiyuliu.com/
 
 ## setup Version
 node >= 1.8

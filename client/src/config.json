@@ -1,4 +1,4 @@
 {
-  "server_host": "matchliu.org/SWIFTIFY",
-  "server_port": "8098"
+  "server_host": "matchliu.org",
+  "server_port": "/SWIFTIFY"
 }
